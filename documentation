@@ -1,0 +1,58 @@
+Units: Imperials 
+Temperatures ranges:
+100 -> 37.6
+Pallete Color use: 
+https://icolorpalette.com/download/palette/234069_color_palette.jpg
+
+- Max: 134 --> Rounded(135)
+- Avg Max: 
+- Min: -60  
+- Avg: 57 --> 
+TEmperatur's table: 
+    scoope = [-128.6, 134]
+    range = (max-min) = 262.6
+    n =  20    ---> intervals quantity
+Sturges Rule: 
+    K = 1.33 + 3.3log(20)
+    K = 5.293
+
+class width: 
+    w = 10; 
+
+Table: 
+
+[-60, -50]     #0072d6 
+[-50, -40]     #1e97ff
+[-40, -30]     #66b8ff
+[-30, -20]     #18bbbd
+[-20, -10]     #38e3e5
+[-10,  0]      #77ebed
+[ 0,  10]      #00d673
+[ 10, 20]      #1eff97
+[ 20, 30]      #66ffb8
+[ 30, 40]      #c6ff89 
+[ 40, 50]      #a3ff42
+[ 50, 60]      #81f900
+[ 60, 70]      #ffe866
+[ 70, 80]      #ffa866
+[ 80, 90]      #ff7f1e
+[ 90, 100]     #f96c00
+[ 100, 110]    #fd908a
+[ 110, 120]    #fd4d44 
+[ 120, 130]    #f70e02
+
+
+
+
+
+Acording the star's temperatures and colors: 
+ - Max = Red (#ff0000) 
+    Orange tonalities 
+    #ffxx00
+ - Avg = green (#f0fffa)
+    #03ffa9	(3,255,169)
+    #50ffc3	(80,255,195)
+    #8affd7	(138,255,215)
+    #c0ffe9	(192,255,233)
+    #f0fffa	(240,255,250)
+ - Min = blue 
