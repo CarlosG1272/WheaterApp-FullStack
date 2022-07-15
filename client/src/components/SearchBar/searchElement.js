@@ -22,4 +22,8 @@ export const Buttons = styled.button`
     background-color: #0077b6;
     border: .1rem solid white;
     margin: .5rem;
+    cursor: pointer;
+    &:hover {
+        background-color: white;
+    }
 `

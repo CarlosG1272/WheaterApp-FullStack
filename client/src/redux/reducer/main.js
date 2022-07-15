@@ -14,7 +14,7 @@ export default function rootReducer (state = initialState, action) {
             newState.cities = action.payload; 
             break
         case ADD_CITY:
-            newState.cities = [...newState.cities, action.payload]
+            newState.cities.unshift(action.payload)
             break
         case REMOVE_CITY: 
             newState.cities = newState.cities.filter(el=> el.id !== action.id)
