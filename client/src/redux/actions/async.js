@@ -1,6 +1,10 @@
 import { ADD_CITY, GET_DEFAULT_CITIES } from "./types"
 
-const baseURL = "http://localhost:3001/wheater"
+export const baseURL = `${
+    process.env.NODE_ENV === "production"
+        ? process.env.REACT_APP_BACK_URL
+        : "http://localhost:3001"
+}`
 
 export const getDefaultCities = () => {
     return function(dispatch){

@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import { DisplayContainer, GlobalContainer, NavBarContainer, ImageContainer, SearchBarContainer, MenuContainer } from "./homeElements";
 import SearhcBar from "../SearchBar/index"
 import MenuOptions from "../MenuOptions";
-import { GrAccessibility } from "react-icons/gr";
-import {FaBeer } from "react-icons/fa"; 
 import {useDispatch, useSelector} from "react-redux";
 import { getDefaultCities } from "../../redux/actions/async";
 import CityCard from "../cityCard";
