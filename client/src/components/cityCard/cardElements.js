@@ -2,16 +2,15 @@ import styled from "styled-components";
 
 export const CardContainer = styled.section`
     width: 35vw;
+    color: black;
     height: 30vh;
     background: ${({image})=> `url(${image})`};
     background-size: cover;
     border: .3rem solid ${({color})=> color};
-    margin: 2rem;
     margin-top: .5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5rem;
     &:hover {
         cursor: pointer;
         #mainTitle{

@@ -5,6 +5,7 @@ import MenuOptions from "../MenuOptions";
 import {useDispatch, useSelector} from "react-redux";
 import { getDefaultCities } from "../../redux/actions/async";
 import CityCard from "../cityCard";
+import { Link } from "react-router-dom";
 
 export default function Home (){ 
     const dispatch = useDispatch(); 
@@ -28,7 +29,10 @@ export default function Home (){
             </NavBarContainer>
             <DisplayContainer>
                 {cities.cities && cities.cities.map(c=>
-                    <CityCard key={c.id} city={c}/>)    
+                <Link key={c.id} to={`/city/${c.id}`} style={{width: "35vw",
+                    height: "30vh", margin: "2rem", marginBottom: "5rem", textDecoration:"none"}}>
+                    <CityCard city={c}/>
+                </Link>)
                 } 
             </DisplayContainer> 
         </GlobalContainer>

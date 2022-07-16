@@ -6,12 +6,18 @@ const initialState = {
     selected: {}
 }
 
+const value = window.localStorage.getItem("cities"); 
+const json = value && JSON.parse(value)
 
 export default function rootReducer (state = initialState, action) {
     let newState = {...state}; 
+    if (json) newState = json; 
+
     switch(action.type){
         case GET_DEFAULT_CITIES: 
-            newState.cities = action.payload; 
+            if(!json) {
+                newState.cities = action.payload;
+            } 
             break
         case ADD_CITY:
             newState.cities.unshift(action.payload)
@@ -20,10 +26,12 @@ export default function rootReducer (state = initialState, action) {
             newState.cities = newState.cities.filter(el=> el.id !== action.id)
             break
         case SELECT_DETAIL_CITY:
-            newState.selected = action.payload; 
+            let coincidence = newState.cities.find(el=> el.id.toString() === action.id.toString()); 
+            newState.selected = coincidence;
             break
         default:
             break
     }
-    return newState
+    window.localStorage.setItem("cities", JSON.stringify(newState))
+    return {...newState}
 }

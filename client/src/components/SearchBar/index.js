@@ -11,6 +11,7 @@ export default function SearhcBar(){
     }
     const handleAdd = () => {
         dispatch(addCity(input)); 
+        setInput(""); 
     }
     return(
         <GlobalContainer>
