@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 export default function Home (){ 
     const dispatch = useDispatch(); 
-    const cities = useSelector((state)=> state); 
+    const cities = useSelector((state)=> state.main); 
     useEffect(()=> {
         dispatch(getDefaultCities())
     }, [])

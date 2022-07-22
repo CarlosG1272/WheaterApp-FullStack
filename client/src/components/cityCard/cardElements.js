@@ -52,6 +52,25 @@ export const DescriptionContainer = styled.section`
     height: 0;
     font-size: 1.5rem;
     font-family: 'Edu TAS Beginner', cursive;
+    #buttonsContainer{
+        z-index: 99;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    svg {
+        height: 2rem;
+        width: auto;
+        color: white;
+    }
+    #delete:hover{
+        color: red;
+    }
+    #favorite:hover{
+        color: yellow;
+    }
 `
 
 export const Title = styled.div`

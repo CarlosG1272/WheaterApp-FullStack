@@ -10,17 +10,18 @@ import {
 } from "./detailElements";
 import "./animation.scss"; 
 
+
 export default function DetailCity() {
   const params = useParams();
   const dispatch = useDispatch();
-  const city = useSelector(state=> state.selected); 
+  const city = useSelector(state=> state.main.selected); 
 
   useEffect(() => {
     dispatch(select_city(params.id));
-  }, []);
+  }, []);   
   return (
     <GlobalContainer>
-        {!city.weather[0] ? <div>Loading...</div>:
+        {!city.weather ? <div>Loading...</div>:
         <MainContainer>
             <FirstRowContainer>
                 <h1>
@@ -44,7 +45,7 @@ export default function DetailCity() {
                         <li title="min - max">{city.main.temp_min} - {city.main.temp_max}</li>
                         <li title="pressure">{city.main.pressure}</li>
                         <li title="humidity">{city.main.humidity}</li>
-                        <li title="sea level">{city.main.sea_level}</li>
+                        <li title="sea level">{city.main.sea_level || "No information"}</li>
                     </ul>
                 </div>
             </SecondRowContainer>

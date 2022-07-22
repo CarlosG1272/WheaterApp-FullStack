@@ -20,7 +20,7 @@ export default function MenuOptions(){
                 <Link to={"/"}>
                     LandingPage
                 </Link>
-                <Link to={"/"}>
+                <Link to={"/favorites"}>
                     Favorites
                 </Link>
                 <Link to={"/"}>  

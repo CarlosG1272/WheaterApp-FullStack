@@ -9,7 +9,7 @@ const initialState = {
 const value = window.localStorage.getItem("cities"); 
 const json = value && JSON.parse(value)
 
-export default function rootReducer (state = initialState, action) {
+export default function main (state = initialState, action) {
     let newState = {...state}; 
     if (json) newState = json; 
 

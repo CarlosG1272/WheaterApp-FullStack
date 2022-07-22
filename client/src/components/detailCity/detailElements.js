@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const GlobalContainer = styled.section`
     position: absolute;
-    height: 100%;
+    min-height: 100%;
+    height: max-content;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -64,7 +65,8 @@ export const SecondRowContainer = styled.section`
     }
     #InformationContainer{
         width: 40%;
-        height: 120%;
+        min-height: 120%;
+        height: max-content;
         display: flex;
         justify-content: center;
         align-items: center;

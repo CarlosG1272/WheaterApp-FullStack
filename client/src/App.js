@@ -3,6 +3,7 @@ import LandingPage from "./components/landing";
 import "./App.scss"
 import Home from "./components/home";
 import DetailCity from "./components/detailCity";
+import Favorites from "./components/favorites";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Route index element={<LandingPage />} />
       <Route path="home" element={<Home />} />
       <Route path="city/:id" element={<DetailCity />}/>
+      <Route path="favorites" element={<Favorites />}/>
     </Routes>
   );
 }
