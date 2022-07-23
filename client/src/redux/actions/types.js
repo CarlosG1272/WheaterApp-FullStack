@@ -6,3 +6,6 @@ export const SELECT_DETAIL_CITY = "SELECT_DETAIL_CITY"
 
 export const ADD_FAVORITE = "ADD_FAVORITE"
 export const REMOVE_FAVORITE = "REMOVE_FAVORITE"
+
+export const ERROR = "ERROR"
+export const RESET_ERROR = "RESET_ERROR"

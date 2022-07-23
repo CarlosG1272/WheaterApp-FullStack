@@ -1,0 +1,81 @@
+.container {
+    position: absolute;
+    background: url(https://i.gifer.com/RDKT.gif);
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContainer {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        height: 100%;
+        width: auto;
+    }
+}
+
+.descriptionContainer{
+    margin-top: 1rem;
+    width: 100%;
+    height: 40%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p{
+        width: 50%;
+        height: 40%;
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.2);
+        padding: 1rem;
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+
+    }
+}
+
+
+.contactContainer{
+    height: 10%;
+    width: 80%;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    a {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        &:hover svg{
+            color: yellow;
+        }
+    }
+    svg {
+        height: 3rem;
+        width: auto;
+        color: black;
+    }
+}

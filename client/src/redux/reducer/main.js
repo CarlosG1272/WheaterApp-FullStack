@@ -1,9 +1,10 @@
-import { ADD_CITY, GET_DEFAULT_CITIES, REMOVE_CITY, SELECT_DETAIL_CITY } from "../actions/types";
+import { ADD_CITY, ERROR, GET_DEFAULT_CITIES, REMOVE_CITY, RESET_ERROR, SELECT_DETAIL_CITY } from "../actions/types";
 
 const initialState = {
     cities: [],
     city: [],
-    selected: {}
+    selected: {},
+    errors: false
 }
 
 const value = window.localStorage.getItem("cities"); 
@@ -22,6 +23,12 @@ export default function main (state = initialState, action) {
         case ADD_CITY:
             newState.cities.unshift(action.payload)
             break
+        case ERROR: 
+            newState.errors = true; 
+        break
+        case RESET_ERROR:
+            newState.errors = false;     
+        break
         case REMOVE_CITY: 
             newState.cities = newState.cities.filter(el=> el.id !== action.id)
             break

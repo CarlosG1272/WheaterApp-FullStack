@@ -17,6 +17,7 @@ export const TextContainer = styled.div`
     align-items: center;
     width: 100%;
     height: 100%;
+    font-size: 2rem;
 `
 
 export const MenuContainer = styled.div`
@@ -29,7 +30,7 @@ export const MenuContainer = styled.div`
     transition: ${({ isShowing }) =>
         isShowing ? "top 0.75s ease-out" : "top 0.75s ease-in"};
     top: ${({isShowing})=> isShowing ? "0":"-100%"};
-    background-color: #00b4d8;
+    background-color: #fa561c;
     button{
         position: absolute;
         top: 3px;
@@ -47,7 +48,7 @@ export const MyUl = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        a {
+        a, div{
             width: 100%;
             height: 5vh;
             display: flex;
@@ -55,10 +56,10 @@ export const MyUl = styled.div`
             color: white;
             justify-content: center;
             align-items: center;
-            outline: 2px solid #caf0f8;
+            outline: 2px solid #0b1926;
             cursor: pointer;
             &:hover{
-                background-color: #023e8a;
+                background-color: orange;
             }
         }
 `

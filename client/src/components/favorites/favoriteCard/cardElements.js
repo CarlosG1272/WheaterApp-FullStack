@@ -11,7 +11,7 @@ export const GlobalContainer = styled.section`
 `
 
 export const TitleContainer = styled.div`
-    color: black;
+    color: white;
     height: 10%;
     width: auto;
     
@@ -23,6 +23,19 @@ export const ImageContainer = styled.div`
     display: flex;
     justify-content: center;
     perspective: 1000px;
+    color: white;
+    padding-bottom: 1rem;
+    svg {
+        position: absolute;
+        height: 0rem;
+        width: auto;
+        color: white;
+        opacity: 1; 
+        z-index: 99;
+        &:hover{
+            color: red; 
+        }
+    }
     img {
         height: 100%;
         width: 15vw;
@@ -30,6 +43,11 @@ export const ImageContainer = styled.div`
         transition: transform 1s ;
         &:hover{
             transform: rotateY(0deg);
+
         }
+    }
+    &:hover svg{
+        height: 2rem;
+        opacity: 1;
     }
 `

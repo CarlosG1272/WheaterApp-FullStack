@@ -13,9 +13,12 @@ export default function SearhcBar(){
         dispatch(addCity(input)); 
         setInput(""); 
     }
+    const handlePress = (e) => {
+        if(e.key === "Enter") handleAdd()
+    }
     return(
         <GlobalContainer>
-                <MyInput type={"text"} value={input} onChange={handleChange} placeholder="Insert city name..." /> 
+                <MyInput type={"text"} value={input} onChange={handleChange} onKeyDown={handlePress} placeholder="Insert city name..." /> 
                 <div>
                     <Buttons onClick={handleAdd}>Search</Buttons>
                 </div>

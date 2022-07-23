@@ -1,23 +1,37 @@
 import React, { useEffect } from "react"; 
-import { DisplayContainer, GlobalContainer, NavBarContainer, ImageContainer, SearchBarContainer, MenuContainer } from "./homeElements";
+import { DisplayContainer, GlobalContainer, NavBarContainer, ImageContainer, SearchBarContainer, MenuContainer, ErrorContainer } from "./homeElements";
 import SearhcBar from "../SearchBar/index"
 import MenuOptions from "../MenuOptions";
 import {useDispatch, useSelector} from "react-redux";
 import { getDefaultCities } from "../../redux/actions/async";
 import CityCard from "../cityCard";
 import { Link } from "react-router-dom";
+import ErrorMessage from "./ErrorMsg";
+import { reset_error } from "../../redux/actions/sync";
+import {TiWeatherPartlySunny} from "react-icons/ti"; 
 
 export default function Home (){ 
     const dispatch = useDispatch(); 
     const cities = useSelector((state)=> state.main); 
+    const url = "https://4.bp.blogspot.com/-J9Yta-atQZU/U4jHgisGFhI/AAAAAAACPjg/4zXKVSXvyVE/s1600/20.gif"
     useEffect(()=> {
         dispatch(getDefaultCities())
     }, [])
+    useEffect(()=> {
+        if(cities.errors) { 
+            setTimeout(()=>dispatch(reset_error()), 3000 ) }
+    },[cities.errors])
     return(
-        <GlobalContainer>
+        <GlobalContainer url={url}>
+            {cities.errors && <ErrorContainer>
+                <ErrorMessage />
+            </ErrorContainer>}
+
             <NavBarContainer>
                 <ImageContainer>
-                    <img src="https://nordicapis.com/wp-content/uploads/5-Best-Free-and-Paid-Weather-APIs-2019-e1587582023501.png" alt="profileimg"/>
+                    <Link to={"/"}>
+                        <TiWeatherPartlySunny />
+                    </Link>
                 </ImageContainer>
                 <SearchBarContainer>
                     <SearhcBar />

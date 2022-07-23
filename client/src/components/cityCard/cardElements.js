@@ -20,6 +20,7 @@ export const CardContainer = styled.section`
             height: 30vh;
             width: 35vw;
             opacity: 1;
+            font-size: 1.5rem;
             transform: translateX(0px)
         }
     }
@@ -50,7 +51,7 @@ export const DescriptionContainer = styled.section`
     opacity: 0;
     width: 0;
     height: 0;
-    font-size: 1.5rem;
+    font-size: 0rem;
     font-family: 'Edu TAS Beginner', cursive;
     #buttonsContainer{
         z-index: 99;

@@ -1,4 +1,4 @@
-import { ADD_CITY, GET_DEFAULT_CITIES } from "./types"; 
+import { ADD_CITY, ERROR, GET_DEFAULT_CITIES } from "./types"; 
 import axios from "axios"; 
 
 export const getDefaultCities = () => {
@@ -15,6 +15,7 @@ export const addCity = (name) => {
         return axios.get(`/getCountryInformation/${name}`)
         .then(res=> res.data)
         .then(json=> dispatch({type: ADD_CITY, payload: json}))
+        .catch(err=> dispatch({type: ERROR}))
     }
 }
 
